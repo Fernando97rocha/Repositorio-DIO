@@ -14,10 +14,10 @@
 	</head>
 	<body>
 		<?php
-        		for ($i = 0 ; $i < 10 ; $i++) {
-            			print("<span class=\"linha\"> Linha número " . $i . "</span><br />");
-        		}
-    		?>
+        	for ($i = 0 ; $i < 10 ; $i++) {
+            	print("<span class=\"linha\"> Linha número " . $i . "</span><br />");
+        	}
+    	?>
 	</body>
 	
 	<script type="text/javascript">
