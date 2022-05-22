@@ -1,6 +1,6 @@
 
 
-#PRINCIPAIS COMANDOS QUE APRENDI NO GIT:
+# PRINCIPAIS COMANDOS QUE APRENDI NO GIT:
 
 git init: Cria um novo repositório local.
 
