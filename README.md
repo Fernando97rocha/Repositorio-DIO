@@ -1,2 +1,2 @@
 # Repositorio DIO 👨‍💻
-Repositório destinado aos projetos e anotações da plataforma DIO.
+Repositório destinado aos estudos e projetos da plataforma DIO.
