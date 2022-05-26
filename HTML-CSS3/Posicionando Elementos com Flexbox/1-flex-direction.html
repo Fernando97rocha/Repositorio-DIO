@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Flez Direction</title>
+
+    <style>
+        .flex-container{
+            padding: 0;
+            margin: 0;
+            display: flex;
+            list-style: none;
+        }
+
+        li{
+            background-color: blue;
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+            margin-left: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .row{
+            flex-direction: row;
+        }
+
+        .row-reverse{
+            flex-direction: row-reverse;
+        }
+        
+        .column{
+            flex-direction: column;
+            float: left;
+        }
+
+        .column-reverse{
+            flex-direction: column-reverse;
+            float: right;
+        }
+
+        </style>
+</head>
+<body>
+    <ul class="flex-container row">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+
+    <ul class="flex-container row-reverse">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+
+    <ul class="flex-container column">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+
+    <ul class="flex-container column-reverse">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</body>
+</html>
