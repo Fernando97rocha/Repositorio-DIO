@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justify content</title>
+
+    <style>
+        /* ROW */
+        .flex-start{
+            margin-bottom: 20px;
+            display: flex;
+            border: solid black 2px;
+            justify-content: start;
+        }
+
+        .flex-end{
+            margin-bottom: 20px;
+            display: flex;
+            border: solid black 2px;
+            justify-content: end;
+        }
+
+        .center{
+            margin-bottom: 20px;
+            display: flex;
+            border: solid black 2px;
+            justify-content: center;
+        }
+
+        .space-between{
+            margin-bottom: 20px;
+            display: flex;
+            border: solid black 2px;
+            justify-content: space-between;
+        }
+
+        .space-around{
+            margin-bottom: 20px;
+            display: flex;
+            border: solid black 2px;
+            justify-content: space-around;
+        }
+
+        /* COLUMNS */
+        .flex-start-column{
+            margin-bottom: 20px;
+            display: flex;
+            border: solid black 2px;
+            flex-direction: column;
+            justify-content: start;
+        }
+
+        .flex-end-column{
+            margin-bottom: 20px;
+            display: flex;
+            border: solid black 2px;
+            flex-direction: column;
+            justify-content: end;
+        }
+
+        .center-column{
+            margin-bottom: 20px;
+            display: flex;
+            border: solid black 2px;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .space-between-column{
+            display: flex;
+            border: solid black 2px;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .space-around-column{
+            margin-bottom: 20px;
+            display: flex;
+            border: solid black 2px;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .column{
+            min-height: 300px;
+        }
+
+        .item{
+            margin: 3px 10px;
+            padding: 5px;
+            background-color:aqua;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>ROW</h2>
+    <h3>flex-start</h3>
+    <div class="flex-container flex-start">
+        <div class="item">1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3 maior</div>
+    </div>
+
+    <h3>flex-end</h3>
+    <div class="flex-container flex-end">
+        <div class="item">1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3 maior</div>
+    </div>
+
+    <h3>center</h3>
+    <div class="flex-container center">
+        <div class="item">1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3 maior</div>
+    </div>
+
+    <h3>space-between</h3>
+    <div class="flex-container space-between">
+        <div class="item">1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3 maior</div>
+    </div>
+
+    <h3>space-around</h3>
+    <div class="flex-container space-around">
+        <div class="item">1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3 maior</div>
+    </div>
+
+    <h2>COLUMN</h2>
+    <h3>flex-start</h3>
+    <div class="flex-container flex-start-column column">
+        <div class="item">1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3 maior</div>
+        <div class="item">4</div>
+        <div class="item">item 5</div>
+    </div>
+
+    <h3>flex-end</h3>
+    <div class="flex-container flex-end-column column">
+        <div class="item">1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3 maior</div>
+        <div class="item">4</div>
+        <div class="item">item 5</div>
+    </div>
+
+    <h3>center</h3>
+    <div class="flex-container center-column column">
+        <div class="item">1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3 maior</div>
+        <div class="item">4</div>
+        <div class="item">item 5</div>
+    </div>
+
+    <h3>space-between</h3>
+    <div class="flex-container space-between-column column">
+        <div class="item">1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3 maior</div>
+        <div class="item">4</div>
+        <div class="item">item 5</div>
+    </div>
+
+    <h3>space-around</h3>
+    <div class="flex-container space-around-column column">
+        <div class="item">1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3 maior</div>
+        <div class="item">4</div>
+        <div class="item">item 5</div>
+    </div>
+
+</body>
+</html>
