@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .flex-container{
+            max-width: 500px;
+            border: solid black 2px;
+            display: flex;
+        }
+
+        .item{
+            background-color: aquamarine;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .basis-auto{
+            flex-basis: auto;
+        }
+
+        .basis-0{
+            flex-basis: 0;
+        }
+
+
+        .flex-grow0{
+            flex-grow: 0;
+        }
+
+        .flex-grow1{
+            flex-grow: 1;
+        }
+
+        .basis-predefinido{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h2>basis-auto</h2>
+    <p>no basis: auto o maior conteúdo terá um maior container (proporcional ao seu tamanho)</p>
+    <section class="flex-container">
+        <div class="item basis-auto flex-grow1">A</div>
+        <div class="item basis-auto flex-grow1">BBbbbB</div>
+        <div class="item basis-auto flex-grow1">C</div>
+        <div class="item basis-auto flex-grow1">DEF</div>
+    </section>
+    <h2>basis-0</h2>
+    <p>no basis: 0 ele tentará manter o tamanho do container o mais padrão possível até que com o tamanho do conteúdo exceda o limite máximo daquela compressão.</p>
+    <section class="flex-container">
+        <div class="item basis-0 flex-grow1">A</div><div class="item basis-0 flex-grow1">BBbbb</div>
+        <div class="item basis-0 flex-grow1">C</div>
+        <div class="item basis-0 flex-grow1">DEF</div>
+    </section>
+    <br>
+    <section class="flex-container">
+        <div class="item basis-0 flex-grow1">A</div><div class="item basis-0 flex-grow1">BBbbbBbbbbbbb</div>
+        <div class="item basis-0 flex-grow1">C</div>
+        <div class="item basis-0 flex-grow1">DEF</div>
+    </section>
+    <h2>basis-predefinido (px, %, em,...)</h2>
+    <p>No flex-basis quando um container tem um valor fixo predefinido e ele fará com que esse valor não mude independente do tamanho do conteúdo.</p>
+    <h3>basis-predefinido flex-basis grow0 (default)</h3>
+    <section class="flex-container">
+        <div class="item basis-predefinido flex-grow0">A</div>
+        <div class="item basis-predefinido flex-grow0">BBbbbB</div>
+        <div class="item basis-predefinido flex-grow0">C</div>
+        <div class="item basis-predefinido flex-grow0">DEFeeezxdzxedxdxhxd</div>
+    </section>
+
+    <h3>basis-predefinido grow1</h3>
+    <p>Quando ele recebe um flex-grow: 1 ele aumentará o container, mas mantendo a regra de manter o tamnho independente do conteúdo.</p>
+    <section class="flex-container">
+        <div class="item basis-predefinido flex-grow1">A</div>
+        <div class="item basis-predefinido flex-grow1">BBbbbB</div>
+        <div class="item basis-predefinido flex-grow1">C</div>
+        <div class="item basis-predefinido flex-grow1">DEF</div>
+    </section>
+    
+</body>
+</html>

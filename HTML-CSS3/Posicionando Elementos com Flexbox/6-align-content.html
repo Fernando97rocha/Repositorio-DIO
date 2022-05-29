@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Fundamentos - align content</title>
+
+    <style>
+        .container{
+            height: 400px;
+            max-width: 300px;
+            display: flex;
+            flex-wrap: wrap;
+            border: solid black 2px;
+        }
+
+        .item{
+            background-color: aquamarine;
+            color: rgb(0, 0, 0);
+            padding: 0 5px;
+            flex: 1;
+            text-align: center;
+            margin: 5px;    
+        }
+
+        .center{
+            align-content: center;
+        }
+
+        .stretch{
+            align-content: stretch; 
+            /* default */
+        }
+
+        .start{
+            align-content: flex-start;
+        }
+
+        .end{
+            align-content: flex-end;
+        }
+
+        .space-between{
+            align-content: space-between;
+        }
+
+        .space-around{
+            align-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <h2>center</h2>
+    <section class="container center">
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta natus</div>
+        <div class="item">Lorem ipsum, dolor sit amet . </div>
+        <div class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt </div>
+        <div class="item">Lorem ipsum dolor sit amet, consectetur adipis</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </div>
+        <div class="item">Lorem ipsum</div>
+        <div class="item">Lorem ipsum</div>
+    </section>
+    <h2>stretch</h2>
+    <section class="container stretch">
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta natus</div>
+        <div class="item">Lorem ipsum, dolor sit amet . </div>
+        <div class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt </div>
+        <div class="item">Lorem ipsum dolor sit amet, consectetur adipis</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </div>
+        <div class="item">Lorem ipsum</div>
+    </section>
+    <h2>flex-start</h2>
+    <section class="container start">
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta natus</div>
+        <div class="item">Lorem ipsum, dolor sit amet . </div>
+        <div class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt </div>
+        <div class="item">Lorem ipsum dolor sit amet, consectetur adipis</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </div>
+        <div class="item">Lorem ipsum</div>
+    </section>
+    <h2>flex-end</h2>
+    <section class="container end">
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta natus</div>
+        <div class="item">Lorem ipsum, dolor sit amet . </div>
+        <div class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt </div>
+        <div class="item">Lorem ipsum dolor sit amet, consectetur adipis</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </div>
+        <div class="item">Lorem ipsum</div>
+    </section>
+    <h2>space-between</h2>
+    <section class="container space-between">
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta natus</div>
+        <div class="item">Lorem ipsum, dolor sit amet . </div>
+        <div class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt </div>
+        <div class="item">Lorem ipsum dolor sit amet, consectetur adipis</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </div>
+        <div class="item">Lorem ipsum</div>
+    </section>
+    <h2>space-around</h2>
+    <section class="container space-around">
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta natus</div>
+        <div class="item">Lorem ipsum, dolor sit amet . </div>
+        <div class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt </div>
+        <div class="item">Lorem ipsum dolor sit amet, consectetur adipis</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </div>
+        <div class="item">Lorem ipsum</div>
+    </section>
+
+
+</body>
+</html>

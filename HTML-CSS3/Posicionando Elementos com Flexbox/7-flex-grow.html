@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .flex-container{
+            display: flex;
+            border: solid black 2px;
+            max-width: 300px;
+            justify-content: center; /* note que esta propriedade afeta somente onde o flex-grow é zero ou none*/
+        }
+
+        .item{
+            background-color: aquamarine;
+            margin: 5px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .flex-grow0{
+            flex-grow: 0;
+        }
+        .flex-grow1{
+            flex-grow: 1;
+        }
+        .flex-grow2{
+            flex-grow: 2;
+        }
+        .flex-grow3{
+            flex-grow: 3;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>flex-grow 0</h2>
+    <section class="flex-container">
+        <div class="item flex-grow0">A</div>
+        <div class="item flex-grow0">B</div>
+        <div class="item flex-grow0">C</div>
+        <div class="item flex-grow0">D</div>
+    </section>
+
+    <h2>flex-grow 1</h2>
+    <section class="flex-container flex-grow1">
+        <div class="item flex-grow1">A</div>
+        <div class="item flex-grow1">B</div>
+        <div class="item flex-grow1">C</div>
+        <div class="item flex-grow1">D</div>
+    </section>
+    <h2>flex-grow alternados</h2>
+    <section class="flex-container flex-grow1">
+        <div class="item flex-grow0">A</div>
+        <div class="item flex-grow3">B</div>
+        <div class="item flex-grow2">C</div>
+        <div class="item flex-grow2">D</div>
+    </section>
+    <h2>flex-grow alternados conteúdo</h2>
+    <section class="flex-container flex-grow1">
+        <div class="item flex-grow0">AAAAAA</div>
+        <div class="item flex-grow3">BBB</div>
+        <div class="item flex-grow2">C</div>
+        <div class="item flex-grow2">D</div>
+    </section>
+</body>
+</html>

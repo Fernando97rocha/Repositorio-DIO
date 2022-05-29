@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .flex-container{
+            display: flex;
+            border: solid black 2px;
+            max-width: 350px;
+        }
+
+        .item{
+            background-color: aquamarine;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .flex-shrink{
+            flex-shrink: 1;
+        }
+
+        .flex-grow{
+            flex-grow: 1;
+        }
+
+        .flex-shrink0{
+            flex-shrink: 0;
+            flex-basis: 150px;
+        }
+
+        .flex-shrink1{
+            flex-shrink: 1;
+            flex-basis: 150px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h2>flex-shrink 1</h2>
+    <div class="flex-container">
+        <div class="item flex-shrink flex-grow">A</div>
+        <div class="item flex-shrink flex-grow">B</div>
+        <div class="item flex-shrink flex-grow">C</div>
+        <div class="item flex-shrink flex-grow">D</div>
+        <div class="item flex-shrink flex-grow">E</div>
+    </div>
+    <p>ao contrário do flex-grow esta propriedade permite a quebra de linha afim de respeitar os limites do container.</p>
+    <div class="flex-container">
+        <div class="item flex-shrink flex-grow">A</div>
+        <div class="item flex-shrink flex-grow">Lorem ipsum dolor sit amet</div>
+        <div class="item flex-shrink flex-grow">C</div>
+        <div class="item flex-shrink flex-grow">D</div>
+        <div class="item flex-shrink flex-grow">E</div>
+    </div>
+
+    <h2>flex-shrink 0</h2>
+    <div class="flex-container">
+        <div class="item flex-shrink0 flex-grow">A</div>
+        <div class="item flex-shrink0 flex-grow">Lorem ipsum dolor</div>
+        <div class="item flex-shrink0 flex-grow">C</div>
+        <div class="item flex-shrink0 flex-grow">D</div>
+        <div class="item flex-shrink0 flex-grow">E</div>
+    </div>
+
+    <h2>flex-shrink 1</h2>
+    <p>o shrink tenta de todas as formas respeitar o limite do container.</p>
+    <div class="flex-container">
+        <div class="item flex-shrink1 flex-grow">A</div>
+        <div class="item flex-shrink1 flex-grow">Lorem ipsum dolor</div>
+        <div class="item flex-shrink1 flex-grow">C</div>
+        <div class="item flex-shrink1 flex-grow">D</div>
+        <div class="item flex-shrink1 flex-grow">E</div>
+    </div>
+</body>
+</html>

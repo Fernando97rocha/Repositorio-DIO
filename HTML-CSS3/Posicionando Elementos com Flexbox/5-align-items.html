@@ -4,179 +4,141 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Justify content</title>
+    <title>Document</title>
 
     <style>
-        /* ROW */
-        .flex-start{
-            margin-bottom: 20px;
+        .container{
+            max-width: 350px;
+            border: 2px solid black;
             display: flex;
-            border: solid black 2px;
-            justify-content: start;
-        }
-
-        .flex-end{
-            margin-bottom: 20px;
-            display: flex;
-            border: solid black 2px;
-            justify-content: end;
-        }
-
-        .center{
-            margin-bottom: 20px;
-            display: flex;
-            border: solid black 2px;
-            justify-content: center;
-        }
-
-        .space-between{
-            margin-bottom: 20px;
-            display: flex;
-            border: solid black 2px;
-            justify-content: space-between;
-        }
-
-        .space-around{
-            margin-bottom: 20px;
-            display: flex;
-            border: solid black 2px;
-            justify-content: space-around;
-        }
-
-        /* COLUMNS */
-        .flex-start-column{
-            margin-bottom: 20px;
-            display: flex;
-            border: solid black 2px;
-            flex-direction: column;
-            justify-content: start;
-        }
-
-        .flex-end-column{
-            margin-bottom: 20px;
-            display: flex;
-            border: solid black 2px;
-            flex-direction: column;
-            justify-content: end;
-        }
-
-        .center-column{
-            margin-bottom: 20px;
-            display: flex;
-            border: solid black 2px;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .space-between-column{
-            display: flex;
-            border: solid black 2px;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .space-around-column{
-            margin-bottom: 20px;
-            display: flex;
-            border: solid black 2px;
-            flex-direction: column;
-            justify-content: space-around;
-        }
-
-        .column{
-            min-height: 300px;
         }
 
         .item{
-            margin: 3px 10px;
-            padding: 5px;
-            background-color:aqua;
+            background-color: aqua;
+            color: black;
             text-align: center;
+            margin: 5px;
+            flex: 1;
         }
-    </style>
+
+        .center{
+            align-items: center; 
+        }
+
+        .stretch{
+            align-items: stretch;
+            height: 150px;
+        }
+
+        .flex-start{
+            align-items: flex-start;
+
+        }
+        .flex-end{
+            align-items: flex-end;
+
+        }
+        .baseline{
+            align-items: baseline;
+         /*  */
+        }
+
+        .column{
+            flex-direction: column;
+        }
+
+        .central{
+            height: 400px;
+            justify-content: center;
+            border: 2px solid black;
+            align-items: center; 
+            /* Eu tinha esquecido de colocar o align items */
+        }
+        .central .item{
+            flex: 0;
+            padding: 15px;
+        }
+        </style>
 </head>
 <body>
-    <h2>ROW</h2>
+    <h1>Row</h1>
+    <h3>center</h3>
+    <section class="container center">
+        <div class="item">item 1</div>
+        <div class="item">Lorem ipsum, dolor sit amet</div>
+        <div class="item"> item 3 como Lorem ipsum amet</div>
+    </section>
+
+    <h3>stretch</h3>
+    <section class="container stretch">
+        <div class="item">item 1</div>
+        <div class="item">Lorem ipsum, dolor sit amet</div>
+        <div class="item"> item 3 como Lorem ipsum amet</div>
+    </section>
+
     <h3>flex-start</h3>
-    <div class="flex-container flex-start">
-        <div class="item">1</div>
-        <div class="item">item 2</div>
-        <div class="item">item 3 maior</div>
-    </div>
+    <section class="container flex-start">
+        <div class="item">item 1</div>
+        <div class="item">Lorem ipsum, dolor sit amet</div>
+        <div class="item"> item 3 como Lorem ipsum amet, more words and nothing more.</div>
+    </section>
 
     <h3>flex-end</h3>
-    <div class="flex-container flex-end">
-        <div class="item">1</div>
-        <div class="item">item 2</div>
-        <div class="item">item 3 maior</div>
-    </div>
+    <section class="container flex-end">
+        <div class="item">item 1</div>
+        <div class="item">Lorem ipsum, dolor sit amet</div>
+        <div class="item"> item 3 como Lorem ipsum amet, more words and nothing more.</div>
+    </section>
 
+    <h3>baseline</h3>
+    <section class="container baseline">
+        <div class="item">item 1</div>
+        <div class="item">Lorem ipsum, dolor sit amet</div>
+        <div class="item"> item 3 como Lorem ipsum amet, more words and nothing more.</div>
+    </section>
+
+    <!-- Início colunas -->
+
+    <h1>Column</h1>
     <h3>center</h3>
-    <div class="flex-container center">
-        <div class="item">1</div>
-        <div class="item">item 2</div>
-        <div class="item">item 3 maior</div>
-    </div>
+    <section class="container center column">
+        <div class="item">item 1</div>
+        <div class="item">Lorem ipsum, dolor sit amet</div>
+        <div class="item"> item 3 como Lorem ipsum amet</div>
+    </section>
 
-    <h3>space-between</h3>
-    <div class="flex-container space-between">
-        <div class="item">1</div>
-        <div class="item">item 2</div>
-        <div class="item">item 3 maior</div>
-    </div>
+    <h3>stretch</h3>
+    <section class="container stretch column">
+        <div class="item">item 1</div>
+        <div class="item">Lorem ipsum, dolor sit amet</div>
+        <div class="item"> item 3 como Lorem ipsum amet</div>
+    </section>
 
-    <h3>space-around</h3>
-    <div class="flex-container space-around">
-        <div class="item">1</div>
-        <div class="item">item 2</div>
-        <div class="item">item 3 maior</div>
-    </div>
-
-    <h2>COLUMN</h2>
     <h3>flex-start</h3>
-    <div class="flex-container flex-start-column column">
-        <div class="item">1</div>
-        <div class="item">item 2</div>
-        <div class="item">item 3 maior</div>
-        <div class="item">4</div>
-        <div class="item">item 5</div>
-    </div>
+    <section class="container flex-start column">
+        <div class="item">item 1</div>
+        <div class="item">Lorem ipsum, dolor sit amet</div>
+        <div class="item"> item 3 como Lorem ipsum amet, more words and nothing more.</div>
+    </section>
 
     <h3>flex-end</h3>
-    <div class="flex-container flex-end-column column">
-        <div class="item">1</div>
-        <div class="item">item 2</div>
-        <div class="item">item 3 maior</div>
-        <div class="item">4</div>
-        <div class="item">item 5</div>
-    </div>
+    <section class="container flex-end column">
+        <div class="item">item 1</div>
+        <div class="item">Lorem ipsum, dolor sit amet</div>
+        <div class="item"> item 3 como Lorem ipsum amet, more words and nothing more.</div>
+    </section>
 
-    <h3>center</h3>
-    <div class="flex-container center-column column">
-        <div class="item">1</div>
-        <div class="item">item 2</div>
-        <div class="item">item 3 maior</div>
-        <div class="item">4</div>
-        <div class="item">item 5</div>
-    </div>
+    <h3>baseline</h3>
+    <section class="container baseline column">
+        <div class="item">item 1</div>
+        <div class="item">Lorem ipsum, dolor sit amet</div>
+        <div class="item"> item 3 como Lorem ipsum amet, more words and nothing more.</div>
+    </section>
 
-    <h3>space-between</h3>
-    <div class="flex-container space-between-column column">
-        <div class="item">1</div>
-        <div class="item">item 2</div>
-        <div class="item">item 3 maior</div>
-        <div class="item">4</div>
-        <div class="item">item 5</div>
-    </div>
-
-    <h3>space-around</h3>
-    <div class="flex-container space-around-column column">
-        <div class="item">1</div>
-        <div class="item">item 2</div>
-        <div class="item">item 3 maior</div>
-        <div class="item">4</div>
-        <div class="item">item 5</div>
-    </div>
-
+    <h1>central</h1>
+    <!-- Método para alinhar itens ao centro do container -->
+    <section class=" container central">
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam illum autem quidem enim consequuntur, id saepe, delectus perferendis ratione et tempore quis consectetur voluptate!.</div>
+    </section>
 </body>
 </html>
