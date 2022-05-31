@@ -1,6 +1,6 @@
 
 
-# PRINCIPAIS COMANDOS QUE APRENDI NO GIT:
+# PRINCIPAIS COMANDOS QUE APRENDI NO GIT :
 
 git init: Cria um novo repositório local.
 
@@ -17,6 +17,10 @@ git commit (sempre com comentário -m): adiciona as alterações mais recentes d
 git push origin main: "Empurra" a branch para o repositório remoto.
 
 git pull: "Puxa" a versão mais atualizada no repositório remoto.
+
+git clone: Copia o repositório para a máquina.
+
+
 
 
 
