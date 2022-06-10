@@ -1,0 +1,3 @@
+function alunosAprovados() {
+    const alunos = []
+}
