@@ -1,0 +1,11 @@
+div{
+    background-color: aqua;
+    border-radius: 100px;
+    width: 400px;
+    height: 400px;
+    display: fle;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    box-sizing: border-box;
+}
