@@ -1,0 +1,38 @@
+
+body{
+    background-color: aquamarine;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#campos{
+    background-color: blueviolet;
+    width: 500px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#tabela{
+    display: block;
+    margin-top: 25px;
+
+}
+
+th{
+    width: 100px;
+}
+
+tr{
+    text-align: center;
+}
+
+
+.thEntrada{
+    width: 200px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estacionamento</title>
+
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <h1>Parking</h1>
+    <div id="campos">
+        <input type="text" id="nome" placeholder="Digite o nome do veículo">
+        <input type="text" id="placa" placeholder="Digite a placa do veículo">
+
+        <button id="cadastrar">Cadastrar</button>
+    </div>
+    <div id="tabela">   
+        <table>
+            <thead>
+                <tr>
+                    <th class="thNome">Nome</th>
+                    <th class="thPlaca">Placa</th>
+                    <th class="thEntrada">Entrada</th>
+                    <th class="thAcoes">Ações</th>
+                </tr>
+            </thead>
+            
+            <tbody id="patio"></tbody>
+        </table>
+    </div>
+    <script src="./assets/script.js"></script>
+</body>
+</html>
