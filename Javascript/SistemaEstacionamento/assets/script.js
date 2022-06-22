@@ -20,8 +20,10 @@
                 <td>${veiculo.nome}</td>
                 <td>${veiculo.placa}</td>
                 <td>${veiculo.entrada}</td>
-                <td>
+                <td class="tdAcoes">
                     <button class="delete" data-placa="${veiculo.placa}"> Remover </button>
+                    <button class="editar" data-placa="${veiculo.placa}"> Editar </button>
+                    
                 </td>
                 `;
             (_a = row.querySelector(".delete")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", function () {

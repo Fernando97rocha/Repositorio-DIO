@@ -32,8 +32,10 @@ interface Veiculo {
                 <td>${veiculo.nome}</td>
                 <td>${veiculo.placa}</td>
                 <td>${veiculo.entrada}</td>
-                <td>
+                <td class="tdAcoes">
                     <button class="delete" data-placa="${veiculo.placa}"> Remover </button>
+                    <button class="editar" data-placa="${veiculo.placa}"> Editar </button>
+                    
                 </td>
                 `
 

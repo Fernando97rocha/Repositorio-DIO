@@ -9,7 +9,6 @@ body{
 }
 
 #campos{
-    background-color: blueviolet;
     width: 500px;
     height: 60px;
     display: flex;
@@ -21,18 +20,56 @@ body{
 #tabela{
     display: block;
     margin-top: 25px;
+    
+}
 
+thead{
+    background-color: aqua;
+    height: 40px;
 }
 
 th{
     width: 100px;
+    border: solid rgb(153, 149, 149) 2px;
 }
 
 tr{
     text-align: center;
 }
 
+td{
+    border: solid rgb(189, 179, 179) 2px;
+    background-color: rgb(233, 246, 246);
+}
+
+.tdAcoes{
+    border: none;
+    background-color: transparent;
+    display: flex;
+}
 
 .thEntrada{
     width: 200px;
 }
+
+/* INPUTS */
+
+input{
+    width: 150px;
+    height: 25px;
+    text-align: center;
+}
+
+#placa{
+    margin: 0 15px;
+}
+
+button{
+    height: 35px;
+}
+
+
+
+
+
+
