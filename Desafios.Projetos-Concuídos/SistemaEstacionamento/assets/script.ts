@@ -1,0 +1,89 @@
+interface Veiculo {
+    nome: string,
+    placa: string,
+    entrada: Date | string;
+}
+
+(function(){
+    const $ = (query: string): HTMLInputElement | null =>
+        document.querySelector(query);
+
+        function calculateTime(mil: number){
+            const minutos = Math.floor(mil / 60000);
+            const segundos = Math.floor((mil % 60000) / 1000);
+
+            return `${minutos}m e ${segundos}s`;
+        }
+
+        function patio(){
+            
+            function ler(): Veiculo[]{
+                return localStorage.patio ? JSON.parse(localStorage.patio) : [];
+            }
+
+            function salvar(veiculo: Veiculo[]){
+                localStorage.setItem("patio", JSON.stringify(veiculo));
+            }
+
+            function adicionar(veiculo:Veiculo, save?: boolean){
+                const row = document.createElement("tr");
+
+                row.innerHTML = `
+                <td>${veiculo.nome}</td>
+                <td>${veiculo.placa}</td>
+                <td>${veiculo.entrada}</td>
+                <td class="tdAcoes">
+                    <button class="delete" data-placa="${veiculo.placa}"> Remover </button>
+                    <button class="editar" data-placa="${veiculo.placa}"> Editar </button>
+                    
+                </td>
+                `
+
+                row.querySelector(".delete")?.addEventListener("click", function(){
+                    remover(this.dataset.placa);
+                })
+
+                $("#patio")?.appendChild(row);
+
+                if(save) salvar([...ler(), veiculo]);
+            }
+
+            function remover(placa: string){
+                const { entrada, nome } = ler().find(
+                    (veiculo) => veiculo.placa === placa);
+
+                const tempo = calculateTime(new Date().getTime() - new Date(entrada).getTime());
+
+                if(!confirm(`O veículo ${nome} permaneceu por ${tempo}. Deseja encerrar?`))
+                return;
+
+                salvar(ler().filter((veiculo) => veiculo.placa !== placa));
+                render();
+            }            
+
+            function render(){
+                $("#patio")!.innerHTML = ""
+                const patio = ler();
+
+                if(patio.length){
+                    patio.forEach((veiculo) => adicionar(veiculo));
+                }
+            }
+
+            return { ler, adicionar, remover, salvar, render};
+        }
+
+        patio().render();
+
+    $("#cadastrar")?.addEventListener("click", () => {
+        const nome = $("#nome")?.value
+        const placa = $("#placa")?.value
+
+        if(!nome || !placa){
+            alert("Os campos nome e placa são obrigatórios")
+            return;
+        }
+
+        patio().adicionar({ nome, placa, entrada: new Date().toISOString()}, true);
+    })
+})()
