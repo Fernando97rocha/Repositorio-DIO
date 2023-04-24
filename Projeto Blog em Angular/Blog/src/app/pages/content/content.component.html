@@ -1,0 +1,22 @@
+<!-- usar [routerLink] ao invés de href -->
+<div class="container__content">
+  <a [routerLink]="['']" class="back-button"> << Voltar </a> 
+  
+  <div class="content__cover">
+    <img src="{{ contentImage }}" alt="Angular image">
+  </div>
+
+  <div class="content__title">
+    <h2>
+      {{ contentTitle }}
+    </h2>
+  </div>
+
+  <hr>
+
+  <div class="content__description">
+    <p>
+      {{ contentDescription }}
+    </p>
+  </div>
+</div>
