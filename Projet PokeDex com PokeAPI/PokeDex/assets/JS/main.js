@@ -7,8 +7,18 @@ const getPokemon = async () => {
       throw new Error ('erro na requisição') 
     }
 
-    const pokemonList = await response.json()
-    console.log(await pokemonList)
+    const pokemonRequest = await response.json()
+    console.log(await pokemonRequest.results)
+
+    const pokemonList = pokemonRequest.results
+
+    pokemonList.forEach(async pokemon => {
+      console.log(pokemon.name)
+      
+      const responseUrlDetails = await fetch(pokemon.url)
+      console.log(await responseUrlDetails.json())
+    })
+
   } catch (error) {
     alert(error) 
   }
