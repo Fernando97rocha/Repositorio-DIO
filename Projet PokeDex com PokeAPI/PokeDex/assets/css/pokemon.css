@@ -1,0 +1,14 @@
+.pokemons{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  list-style: none;
+}
+
+
+.pokemon{
+  background-color: aquamarine;
+  margin: .5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  height: 50px;
+}
