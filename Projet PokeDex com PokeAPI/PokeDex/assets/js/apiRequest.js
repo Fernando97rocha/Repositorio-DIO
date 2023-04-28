@@ -13,8 +13,10 @@ const convertPokeApiDetailToPokemon = (pokemonDetail) => {
   pokemon.type = type
 
   pokemon.photo = pokemonDetail.sprites.other.dream_world.front_default
-
-  convertPokemonToLi(pokemon)
+  const list = []
+  list.push(pokemon)
+  convertPokemonToLi(list)
+  console.log(list)
   return pokemon
 
 }

@@ -7,23 +7,24 @@ let offset = 0;
 
 const convertPokemonToLi = (pokemonDetails) => {
   console.log(pokemonDetails)
-
-  const newHtml = `
-      <li class="pokemon ${pokemonDetails.type}">
-        <span class="number">#${pokemonDetails.number}</span>
-        <span class="name">${pokemonDetails.name}</span>
+  pokemonDetails.forEach(pokemon => {
+    const newHtml = `
+      <li class="pokemon ${pokemon.type}">
+        <span class="number">#${pokemon.number}</span>
+        <span class="name">${pokemon.name}</span>
 
         <div class="detail">
           <ol class="types">
-          ${pokemonDetails.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
+          ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
           </ol>
 
-          <img src="${pokemonDetails.photo}"
-            alt="${pokemonDetails.name}">
+          <img src="${pokemon.photo}"
+            alt="${pokemon.name}">
         </div>
       </li>
     `
     pokemonsOlList.innerHTML += newHtml
+  })
 
 }
 
