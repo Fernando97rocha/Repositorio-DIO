@@ -5,10 +5,6 @@
 
 body {
   background-color: #f6f8fc;
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
 }
 
 .content {
