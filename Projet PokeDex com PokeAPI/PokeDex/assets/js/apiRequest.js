@@ -1,53 +1,35 @@
 
-const pokeApi = {}
-
-const convertPokeApiDetailToPokemon = (pokemonDetail) => {
-  const pokemon = new Pokemon()
-  pokemon.number = pokemonDetail.id
-  pokemon.name = pokemonDetail.name
-
-  const types = pokemonDetail.types.map((typeSlot) => typeSlot.type.name)
-  const [type] = types
-
-  pokemon.types = types
-  pokemon.type = type
-
-  pokemon.photo = pokemonDetail.sprites.other.dream_world.front_default
-  const list = []
-  list.push(pokemon)
-  convertPokemonToLi(list)
-  console.log(list)
-  return pokemon
-
-}
-
-
-pokeApi.getPokemonDetail = async (pokemons) => {
-  console.log(pokemons)
-  pokemons.forEach(async pokemon => {
-    const response = await fetch(pokemon.url)
-    const dataDetails = await response.json()
-    convertPokeApiDetailToPokemon(dataDetails)
-    console.log(dataDetails)
+const fetchPokemonsUrls = async (urlList) => {
+  const pokemons = urlList.map(async url => {
+    const response = await fetch(url)
+    return response.json()
   })
+
+  Promise.all(pokemons)
+    .then(pokemon => {
+      console.log(pokemon);
+      convertPokemonToLi(pokemon)
+    })
 }
 
-
-pokeApi.getPokemons = async (offset = 0, limit = 5) => {
+const getPokemonData = async (offset, limit) => {
   const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
   try {
     const response = await fetch(url)
+
     if (!response.ok) {
-      throw new Error('não foi possível fazer a requisição!')
+      throw new Error('Erro na requisição')
     }
     const data = await response.json()
     const pokemonsData = await data.results
 
-    pokeApi.getPokemonDetail(pokemonsData)
-    
+    const urlPokemonList = []
+    pokemonsData.forEach(async pokemonData => {
+      urlPokemonList.push(pokemonData.url)
+    })
+    fetchPokemonsUrls(urlPokemonList)
   } catch (error) {
     alert(error)
   }
 }
-pokeApi.getPokemons()
 

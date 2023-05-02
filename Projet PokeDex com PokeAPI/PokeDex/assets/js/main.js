@@ -1,39 +1,53 @@
-const pokemonsOlList = document.querySelector('.pokemons')
+const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
+const content = document.querySelector('.content')
+const body = document.querySelector('body')
 
 const maxRecords = 151
 const limit = 10
 let offset = 0;
 
-const convertPokemonToLi = (pokemonDetails) => {
-  console.log(pokemonDetails)
-  pokemonDetails.forEach(pokemon => {
-    const newHtml = `
-      <li class="pokemon ${pokemon.type}">
-        <span class="number">#${pokemon.number}</span>
-        <span class="name">${pokemon.name}</span>
+const convertPokemonToLi = (pokemon) => {
+  const li = pokemon.map(value => {
+    return `
+      <li class="pokemon ${value.types[0].type.name}">
+        <span class="number">#${value.id}</span>
+        <span class="name">${value.name}</span>
 
         <div class="detail">
-          <ol class="types">
-          ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
-          </ol>
+        <ol class="types">
+            <li class="type ${value.types[0].type.name}">
+              ${value.types[0].type.name}</li>
 
-          <img src="${pokemon.photo}"
-            alt="${pokemon.name}">
+            <li class="type ${value.types[1] ? value.types[1].type.name : ''}"> 
+              ${value.types[1] ? value.types[1].type.name : ''}</li> 
+        </ol>
+
+        <img src="${value.sprites.other.dream_world.front_default}"
+            alt="${value.name}">
         </div>
       </li>
     `
-    pokemonsOlList.innerHTML += newHtml
-  })
-
+  }).join('')
+  pokemonList.innerHTML += li
 }
 
-// const loadPokemonItems = (offset, limit) => {
-//   pokeApi.getPokemons(offset, limit)
+function loadPokemonItens(offset, limit) {
+  getPokemonData(offset, limit)
+}
 
-//   convertPokeApiDetailToPokemon(() => {
-//     console.log('funcionou')
-//   })
-// }
+loadPokemonItens(offset, limit)
 
-// loadPokemonItems(offset, limit)
+loadMoreButton.addEventListener('click', () => {
+  offset += limit
+  const qtdRecordsWithNexPage = offset + limit
+
+  if (qtdRecordsWithNexPage >= maxRecords) {
+    const newLimit = maxRecords - offset
+    loadPokemonItens(offset, newLimit)
+
+    loadMoreButton.parentElement.removeChild(loadMoreButton)
+  } else {
+    loadPokemonItens(offset, limit)
+  }
+})

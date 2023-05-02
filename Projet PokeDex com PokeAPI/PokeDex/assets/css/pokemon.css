@@ -84,6 +84,7 @@
   margin: .5rem;
   padding: 1rem;
   border-radius: 1rem;
+  z-index: 1;
 }
 
 .pokemon .number {
@@ -95,7 +96,8 @@
 
 .pokemon .name {
   text-transform: capitalize;
-  color: #fff;
+  color: #160707; 
+  /* mudar a cor para branco */
   margin-bottom: .25rem;
 }
 
@@ -113,7 +115,8 @@
 }
 
 .pokemon .detail .types .type {
-  color: #fff;
+  color: #fbf9f9;
+  color: #fbf9f9;
   padding: .25rem .5rem;
   margin: .25rem 0;
   font-size: .625rem;
@@ -162,4 +165,16 @@
   .pokemons {
       grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+}
+
+.more-details{
+  z-index: 1;
+  background-color: red;
+  position: absolute;
+  top: 150px;
+  left: 35%;
+  border-radius: 15px;
+  height: 60%;
+  width: 30%;
+
 }
