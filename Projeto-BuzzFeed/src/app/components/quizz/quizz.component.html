@@ -1,30 +1,30 @@
 <div class="quiz__container">
   <div class="quiz_logo">
     <img src="assets/images/logo.png" alt="" srcset="">
-    <h3>TITULO</h3>
+    <h3>{{ title }}</h3>
   </div>
 
-  <section class="quiz_questions">
-    <h3>questão</h3>
+  <section *ngIf="!finished" class="quiz_questions">
+    <h3>{{questionSelected.question}}</h3>
   </section>
 
-  <div class="quiz_options">
-    <button class="btn-option">
-      option-name
-    </button>
-    <button class="btn-option">
-      option-name
-    </button>
-    <button class="btn-option">
-      option-name
-    </button>
-    <button class="btn-option">
-      option-name
+  <div *ngIf="!finished" class="quiz_options">
+    <button 
+    *ngFor="let option of questionSelected.options"
+    (click)="playerChoice(option.alias)"
+    class="btn-option">
+      {{option.name}}
     </button>
   </div>
 
-  <div class="quiz_results">
+  <div *ngIf="finished" class="quiz_results">
     <h1>Sua resposta é:</h1>
-    <p>Resultado</p>
+    <p class="result">{{ result }}</p>
+  </div>
+
+  <div class="quiz_remake">
+    <button (click)="remakeQuiz()" class="quiz_undo_button">
+      Refazer teste
+    </button>
   </div>
 </div>
