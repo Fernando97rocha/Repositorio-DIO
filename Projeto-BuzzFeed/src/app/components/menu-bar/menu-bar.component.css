@@ -34,6 +34,11 @@ hr{
   cursor: pointer
 }
 
+.close_list__button > svg {
+  width: 30px;
+  height: 30px;
+}
+
 @media screen and (max-width: 800px){
   .open_list__button{
     display: block;
@@ -79,4 +84,28 @@ hr{
     max-width: max-content;
   }
 
+}
+
+@media screen and (min-width: 800px) {
+  .mobile-menu-oponed{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    padding: 15px 30%;
+  }
+  
+  a > .menu-list__item{
+    color: antiquewhite;
+    text-decoration: none;
+    font-size: 15px larger;
+  }
+  
+  hr{
+    border: solid antiquewhite 1px;
+  }
+
+  .close_list__button{
+    display: none;
+  }
 }
