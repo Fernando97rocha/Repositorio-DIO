@@ -71,14 +71,14 @@ export class QuizzComponent implements OnInit {
   }
 
   //implementação de botão para refazer o teste
-  remakeQuiz() {
+  remakeQuizz() {
     this.questionIndex = 0
-    if (data) {
+    if (!data) {
+      throw new Error ('banco de dados não encontrado')
+    } else {
       this.questionSelected = this.questions[this.questionIndex]
       this.finished = false
       this.answers = []
-      console.log(this.answers)
-    } else {
     }
   }
 }

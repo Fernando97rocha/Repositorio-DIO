@@ -1,28 +1,21 @@
-.quiz__container{
+.quizz__container{
   width: 90%;
   margin: auto;
   margin-top: 20px;
   padding: 5px;
 }
 
-.quiz_logo{
+.quizz_title{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
+  font-size: 30px;
+  text-align: center;
 }
 
-.quiz_logo > img{
-  width: 90%;
-  max-width: 400px;
-}
-
-.quiz_logo > h3 {
-  margin-top: 20px;
-}
-
-.quiz_questions{
+.quizz_questions{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,7 +30,7 @@
   text-shadow: 1px 1px 1px black;
 }
 
-.quiz_options{
+.quizz_options{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -70,7 +63,7 @@
   top: 1px;
 }
 
-.quiz_results{
+.quizz_results{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -87,14 +80,18 @@
   text-align: center;
 }
 
-.quiz_remake{
+.quizz_remake{
   margin-left: auto;
   margin-right: auto;
   width: max-content;
   height: max-content;
 }
 
-.quiz_undo_button{
+.quizz_remake:hover{
+  cursor: pointer;
+}
+
+.quizz_remake_button{
   width: 100px;
   height: 40px;
   font-size: 15px;
