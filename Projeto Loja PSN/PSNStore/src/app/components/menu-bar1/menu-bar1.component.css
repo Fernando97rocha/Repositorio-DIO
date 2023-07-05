@@ -1,0 +1,34 @@
+.menu-bar1__container{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-bar1__menu{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menu-bar1__menu > li {
+  margin-right: 50px;
+  color: grey;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu-bar__logon_search{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: aqua;
+}
+
+.psLogo{
+  width: 30px;
+}
