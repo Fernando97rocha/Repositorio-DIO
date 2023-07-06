@@ -1,0 +1,19 @@
+.menu-bar2__container{
+  background-color: aquamarine;
+  display: flex;
+}
+
+.menu-bar2-list__container{
+  background-color: azure;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-bar2-list__container> ul{
+  display:flex;
+  width: 500px;
+  justify-content: space-between;
+}

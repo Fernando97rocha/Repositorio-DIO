@@ -8,6 +8,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { MenuBar1Component } from './components/menu-bar1/menu-bar1.component';
 import { MenuBar2Component } from './components/menu-bar2/menu-bar2.component';
 import { SonyLogoComponent } from './components/sony-logo/sony-logo.component';
+import { StoreLogoComponent } from './components/store-logo/store-logo.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { SonyLogoComponent } from './components/sony-logo/sony-logo.component';
     MenuBar1Component,
     MenuBar2Component,
     SonyLogoComponent,
+    StoreLogoComponent,
   ],
   imports: [
     BrowserModule,
