@@ -11,6 +11,7 @@ import { SonyLogoComponent } from './components/sony-logo/sony-logo.component';
 import { StoreLogoComponent } from './components/store-logo/store-logo.component';
 import { MainImageComponent } from './components/main-image/main-image.component';
 import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
+import { GameCardsComponent } from './components/game-cards/game-cards.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
     StoreLogoComponent,
     MainImageComponent,
     MenuBarComponent,
+    GameCardsComponent,
   ],
   imports: [
     BrowserModule,
