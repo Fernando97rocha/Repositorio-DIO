@@ -1,8 +1,25 @@
 .game-cards__container{
-
+  width: 90%;
+  margin: 60px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
 .essencials-game-cards__container{
-  
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ul-essentials{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  grid-gap: 15px;
+}
+
+.ul-essentials > li > img{
+  width: 330px;
+  border-radius: 10px;
 }

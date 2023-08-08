@@ -1,10 +1,16 @@
-<div class="game-cards__container">
+<section class="game-cards__container">
 
-  <section class="essencials-game-cards__container">
-    <div></div>
+  <div class="essencials-game-cards__container">
+    <ul class="ul-essentials">
+      <li *ngFor="let item of gameCards">
+        <img [src]="root + item.name + '.png'">
+      </li>
 
-  </section>
-  <section class="ten_more-game-cards__container"></section>
-  <section class="newest-game-cards__container"></section>
+    </ul>
+  </div>
 
-</div>
+  <div class="ten_more-game-cards__container"></div>
+
+  <div class="newest-game-cards__container"></div>
+
+</section>
