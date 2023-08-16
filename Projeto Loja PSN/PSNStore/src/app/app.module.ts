@@ -12,7 +12,6 @@ import { StoreLogoComponent } from './components/store-logo/store-logo.component
 import { MainImageComponent } from './components/main-image/main-image.component';
 import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
 import { GameCardsComponent } from './components/game-cards/game-cards.component';
-import { SmallGameCardsComponent } from './components/small-game-cards/small-game-cards.component';
 import { SmallcardsCarouselComponent } from './components/smallcards-carousel/smallcards-carousel.component';
 import { BestGamesComponent } from './components/best-games/best-games.component';
 import { NewestGamesComponent } from './components/newest-games/newest-games.component';
@@ -30,7 +29,6 @@ import { NewestGamesComponent } from './components/newest-games/newest-games.com
     MainImageComponent,
     MenuBarComponent,
     GameCardsComponent,
-    SmallGameCardsComponent,
     SmallcardsCarouselComponent,
     BestGamesComponent,
     NewestGamesComponent,

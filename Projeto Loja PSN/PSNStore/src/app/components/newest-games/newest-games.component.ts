@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewestGamesComponent implements OnInit {
 
+  newestList: any = [];
   constructor() { }
 
   ngOnInit(): void {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-smallcards-carousel',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./smallcards-carousel.component.css']
 })
 export class SmallcardsCarouselComponent implements OnInit {
+
+  @Input() imageList: any = [];
 
   constructor() { }
 
