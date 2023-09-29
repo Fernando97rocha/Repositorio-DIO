@@ -32,14 +32,14 @@ public class Contador {
             System.out.println("Now, type the second number:");
             secondNumber = s.nextInt();
 
-            a(firstNumber, secondNumber);
+            numberCompair(firstNumber, secondNumber);
 
         } catch (ParametrosInvalidosException e) {
             System.err.println("The second number must be higher than first number");
         }
     }
 
-    static void a (int firstNumber, int secondNumber) throws ParametrosInvalidosException{
+    static void numberCompair (int firstNumber, int secondNumber) throws ParametrosInvalidosException{
         
         int iterationLenth = secondNumber - firstNumber;
 
