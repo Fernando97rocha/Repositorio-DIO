@@ -24,3 +24,11 @@
   margin-left: 50px;
   margin-right: 50px;
 }
+
+.promotion-button__container > button {
+  background-color: #4169E1;
+  color: white;
+  border-radius: 20px;
+  padding: 12px;
+  border: none;
+}
